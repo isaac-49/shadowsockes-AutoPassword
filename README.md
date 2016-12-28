@@ -18,4 +18,12 @@ MacOS上的配置文件是plist，是mac平台上的一种格式。我暂时没�
 
 Windows上的配置文件是 * .json格式的。所以改起来比较方便。
 
+## Windows平台上使用
 
+> 使用前提：
+> 下载Windows平台上的shadowsocks软件，并运行软件。此时会在软件的同一个文件夹下自动生成一个叫gui-config.json的配置文件。
+
+1. 下载项目中的GetPassword.bat脚本文件和ss.jar文件
+2. 请把两个文件放到同一个文件夹里，否则会找不到ss.jar文件而报错。
+3. 请编辑GetPassword.bat脚本文件，把文件里的配置文件的路径改成gui-config.json文件的路径。
+4. 编辑完成后保存。双击运行GetPassword.bat脚本文件即可。
