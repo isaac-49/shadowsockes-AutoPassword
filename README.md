@@ -25,8 +25,8 @@ Windows上的配置文件是 * .json格式的。所以改起来比较方便。
 
 1. 下载项目中的GetPassword.bat脚本文件和ss.jar文件
 2. 请把两个文件放到同一个文件夹里，否则会找不到ss.jar文件而报错。
-3. 请编辑GetPassword.bat脚本文件，把文件里的配置文件的路径改成gui-config.json文件的路径。
-4. 编辑完成后保存。双击运行GetPassword.bat脚本文件即可。
+3. 如果想把gui-config.json文件放到其他位置，请编辑GetPassword.bat脚本文件，把脚本里的gui-config.json文件路径改成它现在所在的路径，编辑完成后保存。
+4. 双击运行GetPassword.bat脚本文件。
 
 *不会写脚本，所以只是简单修改配置文件而已*
 
