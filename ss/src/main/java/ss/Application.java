@@ -1,50 +1,21 @@
 package ss;
 
-import java.io.BufferedWriter;
-import java.io.FileWriter;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import java.io.IOException;
+import java.util.List;
 
 /**
  * Created by issac on 2016/12/27.
  */
 public class Application {
-    public static void main(String []args){
+
+    public static void main(String []args) throws IOException {
         String url  = "http://www.ishadowsocks.info/";
-        String password = "";
-        try {
-            password = HtmlUtil.getPassword(url, "A");
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        String file = "C:\\Users\\issac\\Desktop\\issac.json";
 
-        writeToJson("C:\\Users\\issac\\Desktop\\issac.json","");
-    }
-
-    public  static void writeToJson(String src,String content){
-        BufferedWriter bw = null;
-        FileWriter writer = null;
-        try {
-            writer = new FileWriter(src);
-            writer.write(content);
-            writer.flush();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }finally {
-            try {
-                if (writer != null){
-                    writer.close();
-                }
-            } catch (IOException e) {
-                e.printStackTrace();
-            }finally {
-                try {
-                    if (writer != null) {
-                        writer.close();
-                    }
-                }catch (IOException e){
-                    e.printStackTrace();
-                }
-            }
-        }
+        List<Configs> list = HtmlUtil.getConfigs(url);
+        ObjectMapper mapper = new ObjectMapper();
+        String content = mapper.writeValueAsString(list);
+        JsonUtil.writeToJson(file,content);
     }
 }

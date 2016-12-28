@@ -1,20 +1,21 @@
 package ss;
 
-import java.util.List;
-
 /**
  * Created by issac on 2016/12/27.
  */
 public class Configs {
     public static final String METHOD = "aes-256-cfb";
-    public static final String HOST_A = "A";
-    public static final String HOST_B = "B";
-    public static final String HOST_C = "C";
     private String server;
     private String server_port;
     private String password;
     private String method;
     private String remarks;
+
+    public Configs(String server, String server_port, String password) {
+        this.server = server;
+        this.server_port = server_port;
+        this.password = password;
+    }
 
     public static String getMETHOD() {
         return METHOD;
