@@ -1,0 +1,1 @@
+# -shadowsockes-AutoPassword
