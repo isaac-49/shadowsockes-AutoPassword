@@ -22,9 +22,12 @@ public class HtmlUtil {
             String host = elements.get(i).html();
             String port = elements.get(i+1).html();
             String password = elements.get(i+2).html();
-            Configs configs = new Configs(host,port,password);
+            host = host.split(":")[1];
+            port = port.split(":")[1];
+            password = password.split(":")[1];
+            Configs configs = new Configs(host,port,password,Configs.METHOD,"");
             list.add(configs);
-        }
+}
         return list;
-    }
+                }
 }

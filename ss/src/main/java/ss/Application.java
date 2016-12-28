@@ -14,8 +14,26 @@ public class Application {
         String file = "C:\\Users\\issac\\Desktop\\issac.json";
 
         List<Configs> list = HtmlUtil.getConfigs(url);
+        Properties p = setProperties(list);
         ObjectMapper mapper = new ObjectMapper();
-        String content = mapper.writeValueAsString(list);
+        String content = mapper.writeValueAsString(p);
         JsonUtil.writeToJson(file,content);
     }
+
+    public static Properties setProperties(List<Configs> configses){
+        Properties p = new Properties();
+        p.setStrategy(null);
+        p.setIndex(0);
+        p.setGlobal(false);
+        p.setEnabled(true);
+        p.setShareOverLan(false);
+        p.setIsDefault(false);
+        p.setLocalPort(1080);
+        p.setPacUrl(null);
+        p.setUseOnlinePac(false);
+        p.setAvailabilityStatistics(false);
+        p.setConfigs(configses);
+        return p;
+    }
+
 }

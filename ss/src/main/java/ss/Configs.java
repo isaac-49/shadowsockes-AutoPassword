@@ -11,10 +11,12 @@ public class Configs {
     private String method;
     private String remarks;
 
-    public Configs(String server, String server_port, String password) {
+    public Configs(String server, String server_port, String password, String method, String remarks) {
         this.server = server;
         this.server_port = server_port;
         this.password = password;
+        this.method = method;
+        this.remarks = remarks;
     }
 
     public static String getMETHOD() {
