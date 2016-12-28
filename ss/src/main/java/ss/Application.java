@@ -11,8 +11,7 @@ public class Application {
 
     public static void main(String []args) throws IOException {
         String url  = "http://www.ishadowsocks.info/";
-        String file = "C:\\Users\\issac\\Desktop\\issac.json";
-
+        String file = args[0];
         List<Configs> list = HtmlUtil.getConfigs(url);
         Properties p = setProperties(list);
         ObjectMapper mapper = new ObjectMapper();
