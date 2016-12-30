@@ -2,6 +2,10 @@
 
 >shadowsockes是一个socke代理，是一个跨平台的代理软件。
 
+<<<<<<< Updated upstream
+=======
+*注意：因为我一开始没留意，我的JDK是1.8的，所以有些机器上的JDK版本不是1.8，所以会在运行脚本时报错！因为上班没来得及改。抱歉！*
+>>>>>>> Stashed changes
 
 因为在http://www.ishadowsocks.info 上有密码的代理帐号提供使用。但是密码6小时会自动更新一次。而且服务器IP也不定时更换。
 
